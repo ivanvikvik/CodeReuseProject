@@ -1,9 +1,9 @@
 package by.itstep.vikvik.javalessons.lesson22.model.entity;
 
 public class Human {
-    private String name;
-    private int age;
-    private boolean alive;
+    protected String name;
+    protected int age;
+    protected boolean alive;
 
     public Human() {
     }
