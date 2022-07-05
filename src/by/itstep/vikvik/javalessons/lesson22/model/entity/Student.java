@@ -7,13 +7,15 @@ public class Student extends Human {
     public static final int MAX_STUDENT_AGE = 65;
 
     private double mark = 4;
+    private String name;
 
         // default constructor (with no args)
     public Student() {
         super();
         System.out.println("Student default constructor");
 
-        name = "no name";
+        name = "botan";
+        super.name = "no name";
         age = 16;
         mark = 4;
         alive = true;
