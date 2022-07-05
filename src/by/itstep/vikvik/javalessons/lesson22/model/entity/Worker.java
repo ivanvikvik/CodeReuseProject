@@ -1,36 +1,19 @@
 package by.itstep.vikvik.javalessons.lesson22.model.entity;
 
-public class Worker {
-    private String name;
-    private int age;
+public class Worker extends Human {
     private double salary;
-    //
-    private boolean alive;
 
     public Worker() {
     }
 
     public Worker(String name, int age, double salary, boolean alive) {
-        this.name = name;
-        this.age = age;
+        setName(name);
+        setAge(age);
+        setAlive(alive);
+//        this.name = name;
+//        this.age = age;
         this.salary = salary;
-        this.alive = alive;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+//        this.alive = alive;
     }
 
     public double getSalary() {
@@ -41,17 +24,13 @@ public class Worker {
         this.salary = salary;
     }
 
-    public boolean isAlive() {
-        return alive;
-    }
-
-    public void setAlive(boolean alive) {
-        this.alive = alive;
-    }
-
     public String getInfo() {
-        return "Worker - " + name + ": age = " + age
+//        return "Worker - " + name + ": age = " + age
+//                + ", salary = " + salary
+//                + ", is alive = " + (alive ? "yes" : "no");
+        return "Worker - " + getName() + ": age = " + getAge()
                 + ", salary = " + salary
-                + ", is alive = " + (alive ? "yes" : "no");
+                + ", is alive = " + (isAlive() ? "yes" : "no");
+
     }
 }
