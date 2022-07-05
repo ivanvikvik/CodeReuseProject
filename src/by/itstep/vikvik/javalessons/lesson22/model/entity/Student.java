@@ -10,6 +10,9 @@ public class Student extends Human {
 
         // default constructor (with no args)
     public Student() {
+        super();
+        System.out.println("Student default constructor");
+
         name = "no name";
         age = 16;
         mark = 4;
@@ -18,17 +21,21 @@ public class Student extends Human {
 
     // full constructor with params/args
     public Student(String name, int age, double mark, boolean alive) {
+        super(name, age, alive);
+        System.out.println("Student full constructor");
+        this.mark = mark;
+
 //        setName(name);
 //        setAge(age);
 //        setAlive(alive);
-        this.name = name;
-        this.age = age;
-        this.mark = mark;
-        this.alive = alive;
+//        this.name = name;
+//        this.age = age;
+//        this.alive = alive;
     }
 
     // copy-constructor
     public Student(Student student) {
+        super();
         name = student.name;
         age = student.age;
         mark = student.mark;
@@ -53,9 +60,9 @@ public class Student extends Human {
     }
 
     public String getInfo() {
-        return "Student - " + name + ": age = " + age
-                + ", mark = " + mark
-                + ", is alive = " + (alive ? "yes" : "no");
+        return "Student - " + super.getInfo()
+                + ", mark = " + mark;
+
 //        return "Student - " + getName() + ": age = " + getAge()
 //                + ", mark = " + mark
 //                + ", is alive = " + (isAlive() ? "yes" : "no");

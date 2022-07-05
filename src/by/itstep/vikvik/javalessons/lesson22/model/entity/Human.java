@@ -6,9 +6,12 @@ public class Human {
     protected boolean alive;
 
     public Human() {
+        System.out.println("Human default constructor");
     }
 
     public Human(String name, int age, boolean alive) {
+        System.out.println("Human full constructor");
+
         this.name = name;
         this.age = age;
         this.alive = alive;
