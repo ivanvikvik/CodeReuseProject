@@ -45,7 +45,7 @@ public class Human extends Object {
         this.alive = alive;
     }
 
-    public String getInfo(){
+    public String toString(){
         return name + ": age = " + age
                 + ", is alive = " + (alive ? "yes" : "no");
     }

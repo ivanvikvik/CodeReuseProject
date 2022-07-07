@@ -23,13 +23,13 @@ public class Task06 {
 //        System.out.println(student2.getInfo());
 
         // 3) aggregation
-        MarkNote note = new MarkNote();
-
-        Student student1 = new Student("Alex", 20, note, true);
-        System.out.println(student1.getInfo());
-
-        Student student2 = new Student("Alex", 20, note, true);
-        System.out.println(student2.getInfo());
+//        MarkNote note = new MarkNote();
+//
+//        Student student1 = new Student("Alex", 20, note, true);
+//        System.out.println(student1.getInfo());
+//
+//        Student student2 = new Student("Alex", 20, note, true);
+//        System.out.println(student2.getInfo());
 
     }
 }

@@ -70,8 +70,8 @@ public class Student extends Human {
         note.setMark(mark);
     }
 
-    public String getInfo() {
-        return "Student - " + super.getInfo()
+    public String toString() {
+        return "Student - " + super.toString()
                 + ", mark = " + note.getMark();
 
 //        return "Student - " + getName() + ": age = " + getAge()

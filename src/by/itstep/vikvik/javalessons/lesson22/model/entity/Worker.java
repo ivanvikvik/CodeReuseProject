@@ -25,8 +25,8 @@ public class Worker extends Human {
         this.salary = salary;
     }
 
-    public String getInfo() {
-        return "Worker - " + super.getInfo()
+    public String toString() {
+        return "Worker - " + super.toString()
                 + ", salary = " + salary;
         //        return "Worker - " + getName() + ": age = " + getAge()
 //                + ", salary = " + salary
