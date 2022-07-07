@@ -7,13 +7,14 @@ public class Human extends Object {
 
     public Human() {
         //super();
-        System.out.println("Human default constructor");
+//        System.out.println("Human default constructor");
         // init state
     }
 
     public Human(String name, int age, boolean alive) {
+        String m;
         //this();
-        System.out.println("Human full constructor");
+//        System.out.println("Human full constructor");
 
         this.name = name;
         this.age = age;

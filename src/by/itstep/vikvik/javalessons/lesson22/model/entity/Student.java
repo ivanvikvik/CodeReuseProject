@@ -1,31 +1,30 @@
 package by.itstep.vikvik.javalessons.lesson22.model.entity;
 
 public class Student extends Human {
-    public static final int MIN_MARK = 0;
-    public static final int MAX_MARK = 10;
+
     public static final int MIN_STUDENT_AGE = 16;
     public static final int MAX_STUDENT_AGE = 65;
 
-    private double mark = 4;
+    private MarkNote note;
     private String name;
 
         // default constructor (with no args)
     public Student() {
         super();
-        System.out.println("Student default constructor");
+//        System.out.println("Student default constructor");
 
         name = "botan";
         super.name = "no name";
         age = 16;
-        mark = 4;
+        note = new MarkNote();
         alive = true;
     }
 
     // full constructor with params/args
     public Student(String name, int age, double mark, boolean alive) {
         super(name, age, alive);
-        System.out.println("Student full constructor");
-        this.mark = mark;
+//        System.out.println("Student full constructor");
+        note = new MarkNote(mark);
 
 //        setName(name);
 //        setAge(age);
@@ -40,7 +39,7 @@ public class Student extends Human {
         super();
         name = student.name;
         age = student.age;
-        mark = student.mark;
+        note = new MarkNote(student.note.getMark());
         alive = student.alive;
     }
 
@@ -52,18 +51,16 @@ public class Student extends Human {
 //    }
 
     public double getMark() {
-        return mark;
+        return note.getMark();
     }
 
     public void setMark(double mark) {
-        if (mark >= MIN_MARK && mark <= MAX_MARK) {
-            this.mark = mark;
-        }
+        note.setMark(mark);
     }
 
     public String getInfo() {
         return "Student - " + super.getInfo()
-                + ", mark = " + mark;
+                + ", mark = " + note.getMark();
 
 //        return "Student - " + getName() + ": age = " + getAge()
 //                + ", mark = " + mark
