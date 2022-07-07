@@ -34,6 +34,11 @@ public class Student extends Human {
 //        this.alive = alive;
     }
 
+    public Student(String name, int age, MarkNote note, boolean alive) {
+        super(name, age, alive);
+        this.note = note;
+    }
+
     // copy-constructor
     public Student(Student student) {
         super();
@@ -43,8 +48,15 @@ public class Student extends Human {
         alive = student.alive;
     }
 
+    public MarkNote getNote() {
+        return note;
+    }
 
-//    public void setAge(int age) {
+    public void setNote(MarkNote note) {
+        this.note = note;
+    }
+
+    //    public void setAge(int age) {
 //        if (age >= MIN_STUDENT_AGE && age <= MAX_STUDENT_AGE) {
 //            this.age = age;
 //        }
